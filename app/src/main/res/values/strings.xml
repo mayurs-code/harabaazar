@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">HaraBazaar</string>
+
+    <string name="line"> <strike> ₹ 30.00 </strike> </string>
+    <string name="app_sample">Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet.</string>
+    <string name="resend">Did not received the code? <font color='#33B266'></font></string>
+    <string name="enter_code">Enter 4 digit code to sent to<font color='#33B266'><b>(+91) 9x9x99x9x9</b></font></string>
+    <string name="offerText"><font color='#33B266'><b>50% Off</b></font> On Your First Order   </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="items_4"><font color='#000000'><b>Total</b></font>(4 Items)</string>
+    <string name="order_processed">Your items has been placed and is on it’s way to being processed</string>
+    <string name="back_to_home"><u>Back To Home</u></string>
+    <string name="offer_sample_text"><![CDATA[Flat 50% off for new users only. T&C’s applied Get upto ₹50 off Valid from Oct 31,2021 - 12:00 am to Nov 30,2021 - 11:59 pm valid for 1 time per user valid on minimum ₹100 cart value.]]></string>
+
+    <string name="about_us">About</string>
+    <string name="text_One">Hara Bazaar aims to provide you with high quality veggies through local sabziwaala at mandi rates.</string>
+
+    <string name="copyright">Copyright \u00C2\u00A9 2021 by Hara Bazaar</string>
+    <string name="api_key">AIzaSyDicF68Wm6vUjNFcQs3UehVImPPJa_wYTM</string>
+    <string name="wrong">Oops! Something went wrong.\n Please try again later.🙂</string>
+
+</resources>

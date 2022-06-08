@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="-12dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Confirm location"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            style="@style/TempLayout"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/white_corners"
+            android:drawableLeft="@drawable/navigation"
+            android:drawablePadding="10dp"
+            android:elevation="7dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="30dp"
+            android:text="223, new colony, jabalpur"
+            android:textColor="@color/grey"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mbConfirmLocation"
+            android:text="Confirm Location"
+            style="@style/TempLayout"
+            android:padding="16sp"
+            android:layout_weight="1"
+            app:elevation="0dp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/montserrat_bold"
+            app:backgroundTint="@color/colorPrimary"
+            android:layout_margin="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

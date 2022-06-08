@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+
+    </style>
+    <style name="DialogTheme"
+        parent="ThemeOverlay.MaterialComponents.TimePicker">
+        <item name="colorAccent">@color/colorPrimary</item>
+
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/top_round_rectangle</item>
+    </style>
+
+    <style name="TempLayout">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardCornerRadius">12sp</item>
+        <item name="cornerRadius">12sp</item>
+        <item name="android:outlineSpotShadowColor">@color/shadow</item>
+        <item name="android:outlineAmbientShadowColor">@color/shadow</item>
+
+    </style>
+</resources>

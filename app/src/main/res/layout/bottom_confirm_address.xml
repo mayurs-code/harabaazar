@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:clipChildren="false"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/llOffers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/mcOffers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="4dp"
+                        android:visibility="visible"
+                        app:cardBackgroundColor="@color/white"
+                        style="@style/TempLayout"
+
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/grey"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            android:orientation="horizontal"
+                            android:padding="4dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Available Offers"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="8dp"
+                                android:src="@drawable/star"
+                                android:tint="@color/colorPrimary"
+                                app:tint="@color/colorPrimary" />
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <EditText
+                        android:id="@+id/etPromoCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="4dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="@integer/material_motion_duration_long_1"
+                        android:background="@drawable/white_corners"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:hint="PromoCode"
+                        android:inputType="textPostalAddress"
+                        style="@style/TempLayout"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:textColor="@color/grey"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+                <View
+                    android:background="@color/grey"
+                    android:alpha=".2"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Confirm location"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                style="@style/TempLayout"
+
+                android:layout_marginVertical="4dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Home"
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+
+
+                android:background="@drawable/white_corners"
+                android:backgroundTint="@color/white"
+                android:drawableLeft="@drawable/navigation"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:shadowColor="@color/shadow"
+                android:text="address"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Address"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/white_corners"
+                android:drawablePadding="10dp"
+                android:elevation="16sp"
+                android:gravity="center_vertical"
+                android:hint="Address"
+                android:inputType="textPostalAddress"
+                android:outlineAmbientShadowColor="@color/white"
+                android:outlineSpotShadowColor="@color/white"
+                android:padding="10dp"
+                android:shadowColor="@color/shadow"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:visibility="gone"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="4dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="House Number"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/etHouseNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginVertical="4dp"
+                        android:background="@drawable/white_corners"
+                        android:drawablePadding="10dp"
+                        android:elevation="16sp"
+                        android:gravity="center_vertical"
+                        android:hint="House Number"
+                        android:inputType="textPostalAddress"
+                        android:maxLines="1"
+                        android:outlineAmbientShadowColor="@color/white"
+                        android:outlineSpotShadowColor="@color/white"
+                        android:padding="10dp"
+                        android:textColor="@color/grey"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="4dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Landmark"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/etLandmark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="4dp"
+                        android:background="@drawable/white_corners"
+                        android:drawablePadding="10dp"
+                        android:elevation="16sp"
+                        android:gravity="center_vertical"
+                        android:hint="Landmark"
+                        android:inputType="textPostalAddress"
+                        android:maxLines="1"
+                        android:outlineAmbientShadowColor="@color/white"
+                        android:outlineSpotShadowColor="@color/white"
+                        android:padding="10dp"
+                        android:shadowColor="@color/shadow"
+                        android:textColor="@color/grey"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="4dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Pincode"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/etPincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="4dp"
+                        android:background="@drawable/white_corners"
+
+                        android:drawablePadding="10dp"
+                        android:elevation="16sp"
+                        android:gravity="center_vertical"
+                        android:hint="Pincode"
+                        android:inputType="textPostalAddress"
+                        android:maxLines="1"
+                        android:outlineAmbientShadowColor="@color/white"
+                        android:outlineSpotShadowColor="@color/white"
+                        android:padding="10dp"
+                        android:shadowColor="@color/shadow"
+                        android:textColor="@color/grey"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="4dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="City"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/etCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="4dp"
+                        android:background="@drawable/white_corners"
+
+                        android:drawablePadding="10dp"
+                        android:elevation="16sp"
+                        android:gravity="center_vertical"
+                        android:hint="City"
+                        android:inputType="textPostalAddress"
+                        android:maxLines="1"
+                        android:outlineAmbientShadowColor="@color/white"
+                        android:outlineSpotShadowColor="@color/white"
+                        android:padding="10dp"
+                        android:shadowColor="@color/shadow"
+                        android:textColor="@color/grey"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="4dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="State"
+                        android:textSize="12sp" />
+
+                    <EditText
+
+                        android:id="@+id/etState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="4dp"
+                        android:background="@drawable/white_corners"
+                        android:drawablePadding="10dp"
+                        android:elevation="16sp"
+                        android:gravity="center_vertical"
+                        android:hint="State"
+                        android:inputType="textPostalAddress"
+                        android:maxLines="1"
+                        android:outlineAmbientShadowColor="@color/white"
+                        android:outlineSpotShadowColor="@color/white"
+                        android:padding="10dp"
+                        android:shadowColor="@color/shadow"
+                        android:textColor="@color/grey"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="4dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Mobile"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/etMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="4dp"
+                        android:background="@drawable/white_corners"
+
+                        android:drawablePadding="10dp"
+                        android:elevation="16sp"
+                        android:gravity="center_vertical"
+                        android:hint="Mobile"
+                        android:inputType="textPostalAddress"
+                        android:maxLines="1"
+                        android:outlineAmbientShadowColor="@color/white"
+                        android:outlineSpotShadowColor="@color/white"
+                        android:padding="10dp"
+                        android:shadowColor="@color/shadow"
+                        android:textColor="@color/grey"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mbConfirmLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                style="@style/TempLayout"
+
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="16sp"
+                android:text="Save Default Address"
+                android:textAllCaps="false"
+                app:backgroundTint="@color/colorPrimary"
+                app:elevation="0dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

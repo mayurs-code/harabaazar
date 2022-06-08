@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_map_pin"
+                android:layout_marginEnd="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:fontFamily="@font/montserrat"
+                android:gravity="start"
+                android:text="No Address Found"
+                android:textColor="@color/grey"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_marginEnd="4dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp">
+
+                    <ImageView
+                        android:id="@+id/ivNotifications"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"
+                        android:src="@drawable/bell_icon" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rlNotificationBadge"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:layout_alignParentEnd="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivBadgeNotification1"
+                            android:layout_width="16dp"
+                            android:layout_centerInParent="true"
+                            android:layout_height="16dp"
+                            android:src="@drawable/count_badge_icon" />
+
+                        <TextView
+                            android:gravity="center"
+                            android:id="@+id/tvNotificationSize"
+                            android:layout_centerInParent="true"
+                            android:textSize="9dp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="28dp"
+                    android:layout_height="28dp">
+
+                    <ImageView
+                        android:id="@+id/ivCart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/cart_icon" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rlCartBadge"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:layout_alignParentEnd="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivBadgeNotification2"
+                            android:layout_width="16dp"
+                            android:layout_centerInParent="true"
+                            android:layout_height="16dp"
+                            android:src="@drawable/count_badge_icon" />
+
+                        <TextView
+                            android:gravity="center"
+                            android:id="@+id/tvCartSize"
+                            android:layout_centerInParent="true"
+                            android:textSize="9dp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/tvSearch"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/welcome"
+            android:layout_margin="16dp"
+            android:background="@drawable/white_corners"
+            android:drawableLeft="@drawable/search_icon"
+            android:drawablePadding="16dp"
+            android:elevation="16dp"
+
+            android:fontFamily="@font/montserrat"
+            android:gravity="start|center_vertical"
+            android:hint="Search Categories or Vegetables"
+            android:outlineSpotShadowColor="@color/shadow"
+            android:outlineAmbientShadowColor="@color/shadow"
+
+            android:paddingLeft="16dp"
+            android:paddingRight="30dp"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProducts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/cvCategories"
+            android:visibility="gone"
+            android:clipChildren="false"
+            tools:itemCount="3"
+            tools:listitem="@layout/card_recommended_products" />
+
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/categoriesTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            app:tabMode="scrollable"
+            android:paddingHorizontal="16dp"
+            app:tabPadding="4dp" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="8dp"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
