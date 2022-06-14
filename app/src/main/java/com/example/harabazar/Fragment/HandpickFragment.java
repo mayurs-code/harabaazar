@@ -29,7 +29,6 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.bumptech.glide.Glide;
 import com.example.harabazar.Activity.DailyListActivity;
-import com.example.harabazar.Activity.MyOrdersActivity;
 import com.example.harabazar.Activity.OrderMapActivity;
 import com.example.harabazar.Activity.SplashActivity;
 import com.example.harabazar.R;
@@ -222,7 +221,7 @@ public class HandpickFragment extends Fragment implements OnRequestResponseListe
         mcHawkerSave = view.findViewById(R.id.mcHawkerSave);
         ivUserImage = view.findViewById(R.id.ivUserImage);
         mcOngoingOrder = view.findViewById(R.id.mcOngoingOrder);
-        mbRequestNow = view.findViewById(R.id.mbRequestNow);
+        mbRequestNow = view.findViewById(R.id.mbMakeOrder);
         mcHelp = view.findViewById(R.id.mcHelp);
         mbCheckInventory = view.findViewById(R.id.mbCheckInventory);
         ivHawker = view.findViewById(R.id.ivHawker);
@@ -452,7 +451,8 @@ public class HandpickFragment extends Fragment implements OnRequestResponseListe
                 public void onClick(View v) {
                     Intent i=new Intent(getActivity(), DailyListActivity.class);
                     i.putExtra("address",address);
-                    i.putExtra("latLng",latLng.toString());
+                    i.putExtra("lat",""+latLng.latitude);
+                    i.putExtra("lng",""+latLng.longitude);
                     getContext().startActivity(i);
 
                 }

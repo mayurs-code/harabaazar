@@ -48,14 +48,14 @@ public class DailyListActivity extends AppCompatActivity implements OnRequestRes
     private CheckBox cbCheck;
     private ImageView ivBack;
     private LatLng latLng;
-//    private Address address;
+    private String address;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daily_list);
-        latLng = new LatLng(Double.parseDouble(getIntent().getStringExtra("latLng")), Double.parseDouble(getIntent().getStringExtra("latLng")));
-//        address = getIntent().getStringExtra("address");
+        latLng = new LatLng(Double.parseDouble(getIntent().getStringExtra("lat")), Double.parseDouble(getIntent().getStringExtra("lng")));
+        address = getIntent().getStringExtra("address");
         rvInventory = findViewById(R.id.rvInventory);
         cbCheck = findViewById(R.id.cbCheck);
         ivBack = findViewById(R.id.ivBack);
